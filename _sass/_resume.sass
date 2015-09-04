@@ -1,0 +1,84 @@
+//Resume
+table
+  margin: 100px 0
+.lBlue
+  color: #6bd7ff
+  transition: all 500ms ease
+  &:hover
+    color: white
+    background-color: #0054a6
+.lGreen
+  color: #27e930
+  transition: all 500ms ease
+  &:hover
+    color: white
+    background-color: green
+.tOne
+  text-decoration: underline
+.tTwo
+  padding-left: 20px
+  text-decoration: none
+.tThree
+  padding-left: 40px
+  font-style: italic
+  text-decoration: none
+.tLeft
+  border-left: solid 1px white
+  padding-left: 10px
+  text-align: left
+.tRight
+  border-right: solid 1px white
+  text-align: right
+  padding-right: 10px
+  padding-right: 20px
+  vertical-align: center
+.profPic
+  background:
+    image: url("../img/images/profPic.jpg")
+    size: contain
+    repeat: no-repeat
+  float: left
+  width: 250px
+  height: 250px
+  max-width: 568px
+  margin: 0 3%
+table li
+  list-style: none
+  margin-bottom: 0
+  padding: .5rem 0
+tr:last-child td
+  border-bottom: solid 0 black
+
+.button
+  background-color: #59b3d4
+  border-color: #59b3d4
+  color: white
+  display: block
+  transition: all .1s ease
+  &:hover
+    background-color: #0e8ab8
+    border-color: #0e8ab8
+    color: white
+    p
+      transform: scale(1.2)
+  p
+    transition: all .05s ease
+    transform: scale(1)
+
+
+
+.rBlue
+  transition: all .3s ease
+  &:hover
+    background-color: #0054a6
+
+.rGreen
+  transition: all .3s ease
+  &:hover
+    background-color: green
+
+@media (max-width:410px)
+  .button
+    width: 60vw
+  .buttonHolder
+    margin-top: 15px

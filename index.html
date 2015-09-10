@@ -4,22 +4,13 @@
     <title>Zach Eastin Portfolio</title>
     <link href="css/main.css" rel="stylesheet">
     <link rel="shortcut icon" href="../img/images/icons/ZE.ico">
-    <link rel="apple-tough-icon" href="../img/images/icons/ZE.ico">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway:100,200" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway:100,200,400" rel="stylesheet" type="text/css">
     <meta name="keywords" content="Portfolio, Blender 3D, Blender, Zach Eastin">
     <meta name="description" content="Zach Eastin's Portfolio Website">
     <meta charset="UTF-8">
     <meta name="author" content="Zach Eastin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63855028-1', 'auto');
-  ga('send', 'pageview');
-
-    </script>
+    <script type="text/javascript">include googletracking.jade</script>
   </head>
   <body>
     <div>
@@ -42,13 +33,16 @@
       <div class="mImages menuItem sliderClick">
         <h5>Images</h5>
       </div>
+      <div class="mWebDesign menuItem sliderClick">
+        <h5>Web Design</h5>
+      </div>
       <div class="mContact menuItem sliderClick">
         <h5>Contact</h5>
       </div>
       <div class="icons"><a href="https://zacheastinanimation.wordpress.com" target="_blank" class="blog icon">
           <h5>Blog</h5></a><a href="https://www.facebook.com/ZachEastinAnimation" target="_blank" class="facebookIcon icon"><img src="../img/images/icons/facebookF.png"></a><a href="https://www.linkedin.com/in/zacheastin" target="_blank" class="linkedInIcon icon"><img src="../img/images/icons/linkedinIN.png"></a></div>
     </nav>
-    <section id="lightBoxVids" class="vids active contentBlock">
+    <section id="lightBoxVids" class="contentBlock vids">
       <div class="container flex">
         <h1 class="mobileTitles">Animations</h1>
         <div class="lightBox vid video demoReel"><a href="https://www.youtube.com/embed/xPy3sxANlnU"></a></div>
@@ -59,7 +53,7 @@
         <div class="lightBox vid video littleThings"><a href="https://www.youtube.com/embed/-kfeno5kcEE?rel=0"></a></div><a href="" class="empty"></a><a href="" class="empty"></a><a href="" class="empty"></a>
       </div>
     </section>
-    <section id="lightBoxPic" class="images right contentBlock active">
+    <section id="lightBoxPic" class="contentBlock images">
       <div class="container flex">
         <h1 class="mobileTitles">Images</h1>
         <div class="lightBox pic image snowman"><a href="../img/../img/images/portfolio/bigPic/snowman.jpg"></a></div>
@@ -77,7 +71,26 @@
         <div class="lightBox pic image africa"><a href="../img/../img/images/portfolio/bigPic/africa.jpg"></a></div><a href="" class="empty"></a><a href="" class="empty"></a><a href="" class="empty"></a>
       </div>
     </section>
-    <section class="contact vRight contentBlock">
+    <section class="contentBlock webDesign">
+      <div class="container flex">
+        <h1 class="mobileTitles">Web Design</h1>
+        <div class="iframeHolder">
+          <iframe src="http:\www.zacheastin.com"></iframe>
+          <div class="websiteInfo"> <a href="http:\www.zacheastin.com">
+              <h3>ZachEastin.com</h3></a>
+            <h4>Portfolio Website</h4>
+          </div>
+        </div>
+        <div class="iframeHolder">
+          <iframe src="http:\www.crosstraining-inc.com"></iframe>
+          <div class="websiteInfo"> <a href="http:\www.crosstraining-inc.com">
+              <h3>CrossTraining-Inc.com</h3></a>
+            <h4>CrossTraining Gym Website</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact contentBlock">
       <div class="container flex">
         <h1 class="mobileTitles">Contact Me</h1>
         <div class="profPic"></div>
@@ -85,66 +98,68 @@
             <p>Email Me</p></a><a href="https://www.facebook.com/ZachEastinAnimation" target="_blank" class="button">
             <p>facebook</p></a><a href="https://www.linkedin.com/in/zacheastin" target="_blank" class="button">
             <p>linkedin</p></a></div>
-        <table>
-          <tr>
-            <td class="tRight lBlue">
+        <div class="resume">
+          <div class="row">
+            <div class="resHeader blue">
               <h2>Experience</h2>
-            </td>
-            <td class="tLeft experience">
-              <ol>
-                <ul class="rBlue">
-                  <li class="tOne">What Makes Us Human Short Film</li>
-                  <li class="tTwo">VFX Supervisor</li>
-                  <li class="tThree">3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor</li>
-                </ul>
-                <ul class="rBlue">
-                  <li class="tOne">Pointe of Contact Short Film</li>
-                  <li class="tTwo">VFX Supervisor</li>
-                  <li class="tThree">3D Tracking; Compositing</li>
-                </ul>
-                <ul class="rBlue">
-                  <li class="tOne">OPAL Agency</li>
-                  <li class="tTwo">Graphic Designer</li>
-                  <li class="tThree">Flyers; Posters</li>
-                </ul>
-              </ol>
-            </td>
-          </tr>
-          <tr>
-            <td class="tRight lGreen">
+            </div>
+            <div class="resInfo">
+              <div class="exSection">
+                <p class="tOne">what makes us human short film</p>
+                <p class="tTwo">VFX Supervisor</p>
+                <p class="tThree">3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor</p>
+              </div>
+              <div class="exSection">
+                <p class="tOne">Pointe of Contact Short Film</p>
+                <p class="tTwo">VFX Supervisor</p>
+                <p class="tThree">3D Tracking; Compositing</p>
+              </div>
+              <div class="exSection">
+                <p class="tOne">CrossTraining Inc. Website</p>
+                <p class="tTwo">Designer</p>
+                <p class="tThree">Squarespace; Designer; Image Editor</p>
+              </div>
+              <div class="exSection">
+                <p class="tOne">Personal Portfolio Website</p>
+                <p class="tTwo">Designer Builder</p>
+                <p class="tThree">HTML/Jade; CSS/SASS; jQuery; Jekyll; GitHub Pages</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="resHeader green">
               <h2>Skills</h2>
-            </td>
-            <td class="tLeft skills">
-              <ul>
-                <li class="rGreen">Collaboration</li>
-                <li class="rGreen">Problem Solving</li>
-                <li class="rGreen">Hard Worker</li>
-                <li class="rGreen">3D Modeling</li>
-                <li class="rGreen">2D Motion Design</li>
-                <li class="rGreen">3D Animations</li>
-                <li class="rGreen">Website Building</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td class="tRight lBlue">
+            </div>
+            <div class="resInfo">
+              <p>Collaboration</p>
+              <p>Problem Solving</p>
+              <p>Hard Worker</p>
+              <p>Lover of Learning</p>
+              <p>3D Modeling</p>
+              <p>2D Motion Design</p>
+              <p>3D Animations</p>
+              <p>Website Building</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="resHeader blue">
               <h2>Education</h2>
-            </td>
-            <td class="tLeft education rBlue">
-              <p>Electronic Arts: Computer Animation BS; GPA 3.52<br>Art Minor<br>Missouri State University Springfield, MO May 2015</p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tRight lGreen">
+            </div>
+            <div class="resInfo">
+              <p>Electronic Arts: Computer Animation BS; GPA 3.52</p>
+              <p>Art Minor</p>
+              <p>Missouri State University Springfield, MO May 2015</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="resHeader green">
               <h2>Awards</h2>
-            </td>
-            <td class="tLeft awards rGreen">
-              <ul>
-                <li> <strong>District Gold ADDY Award 2014 - </strong><em>Production Assistant</em></li>
-              </ul>
-            </td>
-          </tr>
-        </table>
+            </div>
+            <div class="resInfo">
+              <p>District Gold ADDY Award 2014 - <em>Production Assistant<em></p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>

@@ -1,27 +1,39 @@
 var main = $(function () {
   $('.vids').addClass('active');
   $('.images').addClass('right');
-  $('.contact').addClass('vRight');
+  $('.webDesign').addClass('vRight');
+  $('.contact').addClass('vvRight');
 
   $('.mVids').click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-    $('.contentBlock').removeClass('vLeft left active right vRight');
+    $('.contentBlock').removeClass('vvLeft vLeft left active right vRight vvRight');
     $('.vids').addClass('active');
     $('.images').addClass('right');
-    $('.contact').addClass('vRight');
+    $('.webDesign').addClass('vRight');
+    $('.contact').addClass('vvRight');
   });
   $('.mImages').click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-    $('.contentBlock').removeClass('vLeft left active right vRight');
+    $('.contentBlock').removeClass('vvLeft vLeft left active right vRight vvRight');
     $('.vids').addClass('left');
     $('.images').addClass('active');
+    $('.webDesign').addClass('right');
+    $('.contact').addClass('vRight');
+  });
+  $('.mWebDesign').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $('.contentBlock').removeClass('vvLeft vLeft left active right vRight vvRight');
+    $('.vids').addClass('vLeft');
+    $('.images').addClass('left');
+    $('.webDesign').addClass('active');
     $('.contact').addClass('right');
   });
   $('.mContact').click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-    $('.contentBlock').removeClass('vLeft left active right vRight');
-    $('.vids').addClass('vLeft');
-    $('.images').addClass('left');
+    $('.contentBlock').removeClass('vvLeft vLeft left active right vRight vvRight');
+    $('.vids').addClass('vvLeft');
+    $('.images').addClass('vLeft');
+    $('.webDesign').addClass('left');
     $('.contact').addClass('active');
   });
 
@@ -34,7 +46,7 @@ var main = $(function () {
   });
   $('.sliderClick').click(function() {
       left = $(this).position().left;
-      width = $(this).width() + 40;
+      width = $(this).width() + 47;
       $('.menuItem').removeClass("activeMenu");
       $(this).addClass("activeMenu");
       $('.slider').stop().animate({

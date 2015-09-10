@@ -1,37 +1,22 @@
 //Resume
-table
+.resume
   margin: 100px 0
-.lBlue
+  max-width: 90vw
+  display: flex
+  flex-direction: column
+.blue
   color: #6bd7ff
   transition: all 500ms ease
-  &:hover
-    color: white
-    background-color: #0054a6
-.lGreen
+.green
   color: #27e930
   transition: all 500ms ease
-  &:hover
-    color: white
-    background-color: green
 .tOne
   text-decoration: underline
 .tTwo
   padding-left: 20px
-  text-decoration: none
 .tThree
   padding-left: 40px
   font-style: italic
-  text-decoration: none
-.tLeft
-  border-left: solid 1px white
-  padding-left: 10px
-  text-align: left
-.tRight
-  border-right: solid 1px white
-  text-align: right
-  padding-right: 10px
-  padding-right: 20px
-  vertical-align: center
 .profPic
   background:
     image: url("../img/images/profPic.jpg")
@@ -42,13 +27,6 @@ table
   height: 250px
   max-width: 568px
   margin: 0 3%
-table li
-  list-style: none
-  margin-bottom: 0
-  padding: .5rem 0
-tr:last-child td
-  border-bottom: solid 0 black
-
 .button
   background-color: #59b3d4
   border-color: #59b3d4
@@ -65,20 +43,67 @@ tr:last-child td
     transition: all .05s ease
     transform: scale(1)
 
-
-
-.rBlue
-  transition: all .3s ease
-  &:hover
-    background-color: #0054a6
-
-.rGreen
-  transition: all .3s ease
-  &:hover
+.row
+  margin: 0 auto
+  padding: 10px 0
+  display: inline-flex
+  position: relative
+  &:hover .green
+    color: white
     background-color: green
+  &:hover .blue
+    color: white
+    background-color: #0054a6
+  .resHeader
+    border-right: solid 1px white
+    text-align: right
+    width: 50%
+    h2
+      margin: 5px 0 0 10px
+      display: inline-block
+      height: 100%
+  .resInfo
+    text-align: left
+    color: white
+    text-transform: capitalize
+    width: 50%
+    p
+      margin: 0 10px
+      &:last-child
+        margin-bottom: 10px
+
+
 
 @media (max-width:410px)
   .button
     width: 60vw
   .buttonHolder
     margin-top: 15px
+
+  .resume
+    margin: 10px 0
+    .row
+      margin: 20px auto
+      padding: 0
+      display: block
+      position: relative
+      width: 100%
+      .resHeader
+        border-top: solid 1px white
+        border-left: solid 1px white
+        border-right: solid 0
+        text-align: left
+        width: 100%
+        h2
+          margin: 5px auto 0 10px
+      .resInfo
+        border-bottom: solid 1px white
+        border-right: solid 1px white
+        text-align: right
+        color: white
+        text-transform: capitalize
+        width: 100%
+        p
+          margin: 0 10px
+          &:last-child
+            margin-bottom: 10px

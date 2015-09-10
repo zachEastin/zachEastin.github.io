@@ -7,142 +7,15 @@ mixin videoBox(className, url)
 
 doctype html
 html(lang="en")
-  head
-    title="Zach Eastin Portfolio"
-    link(href="css/main.css" rel="stylesheet")
-    link(rel="shortcut icon" href="../img/images/icons/ZE.ico")
-    link(rel="apple-tough-icon" href="../img/images/icons/ZE.ico")
-    link(href="https://fonts.googleapis.com/css?family=Muli|Raleway:100,200" rel='stylesheet' type='text/css')
-    meta(name="keywords" content="Portfolio, Blender 3D, Blender, Zach Eastin")
-    meta(name="description" content="Zach Eastin's Portfolio Website")
-    meta(charset="UTF-8")
-    meta(name="author" content="Zach Eastin")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(type="text/javascript")
-      include js/googletracking.js  
+  include _includes/head.jade
   body
-    div
-      #preload-1
-      #preload-2
-      #preload-3
-      #preload-4
-      #preload-5
-      #preload-6
-    nav
-      .toggle
-        .toggleTop.toggleLine
-        .toggleMid.toggleLine
-        .toggleBot.toggleLine
-      a.logo(href='www.zacheastin.com')
-      .mVids.menuItem.sliderClick.activeMenu
-        h5 Animations
-      .mImages.menuItem.sliderClick
-        h5 Images
-      .mContact.menuItem.sliderClick
-        h5 Contact
-        
-      .icons
-        a.blog.icon(href="https://zacheastinanimation.wordpress.com" target="_blank")
-          h5 Blog
-        a.facebookIcon.icon(href="https://www.facebook.com/ZachEastinAnimation" target="_blank")
-          img(src="../img/images/icons/facebookF.png")
-        a.linkedInIcon.icon(href="https://www.linkedin.com/in/zacheastin" target="_blank")
-          img(src="../img/images/icons/linkedinIN.png")
-    
-
-    section.vids.active.contentBlock#lightBoxVids
-      .container.flex
-        h1.mobileTitles Animations
-        +videoBox('demoReel', 'https://www.youtube.com/embed/xPy3sxANlnU')
-        +videoBox('WMUH', 'https://www.youtube.com/embed/5cB9ndewvrk')
-        +videoBox('WMUHvfx', 'https://www.youtube.com/embed/-SEdbHP8L6U')
-        +videoBox('nineteenEightyFour', 'https://player.vimeo.com/video/120224592')
-        +videoBox('fnf', 'https://www.youtube.com/embed/HatbXlfNC2g?rel=0')
-        +videoBox('littleThings', 'https://www.youtube.com/embed/-kfeno5kcEE?rel=0')
-        a(href="").empty
-        a(href="").empty
-        a(href="").empty
-
-
-    section.images.right.contentBlock.active#lightBoxPic
-      .container.flex
-        h1.mobileTitles Images
-        +imageBox('snowman','snowman')
-        +imageBox('robotLightbulb','Robot-lightbulbBetter')
-        +imageBox('oldMan','oldManAwesome')
-        +imageBox('elf','elfNew')
-        +imageBox('minicoop','MiniCoop')
-        +imageBox('bike','bike')
-        +imageBox('ornament','OrnamentBetter')
-        +imageBox('pumpkin','pumpkin')
-        +imageBox('cellphone','cellphone')
-        +imageBox('dinnerware','dinnerware')
-        +imageBox('balloons','balloons')
-        +imageBox('butGod','butGod')
-        +imageBox('africa','africa')
-        a(href="").empty
-        a(href="").empty
-        a(href="").empty
-
-
-    section.contact.vRight.contentBlock
-      .container.flex
-        h1.mobileTitles Contact Me
-        .profPic
-        .buttonHolder
-          a(href="mailto:chatme@zacheastin.com" target="_blank").button
-            p Email Me
-          a(href="https://www.facebook.com/ZachEastinAnimation" target="_blank").button
-            p facebook
-          a(href="https://www.linkedin.com/in/zacheastin" target="_blank").button
-            p linkedin
-            
-        table
-          tr
-            td.tRight.lBlue
-              h2 Experience
-            td.tLeft.experience
-              ol
-                ul.rBlue
-                  li.tOne What Makes Us Human Short Film
-                  li.tTwo VFX Supervisor
-                  li.tThree 3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor
-                ul.rBlue
-                  li.tOne Pointe of Contact Short Film
-                  li.tTwo VFX Supervisor
-                  li.tThree 3D Tracking; Compositing
-                ul.rBlue
-                  li.tOne OPAL Agency
-                  li.tTwo Graphic Designer
-                  li.tThree Flyers; Posters
-          tr
-            td.tRight.lGreen
-              h2 Skills
-            td.tLeft.skills
-              ul
-                li.rGreen Collaboration
-                li.rGreen Problem Solving
-                li.rGreen Hard Worker
-                li.rGreen 3D Modeling
-                li.rGreen 2D Motion Design
-                li.rGreen 3D Animations
-                li.rGreen Website Building
-          tr
-            td.tRight.lBlue
-              h2 Education
-            td.tLeft.education.rBlue
-              p Electronic Arts: Computer Animation BS; GPA 3.52<br>Art Minor<br>Missouri State University Springfield, MO May 2015
-          tr
-            td.tRight.lGreen
-              h2 Awards
-            td.tLeft.awards.rGreen
-              ul
-                li 
-                  strong District Gold ADDY Award 2014 - 
-                  em Production Assistant
-            
-    footer
-      p Website designed and built by the artist, Zach Eastin
+    include _includes/preLoads.jade
+    include _includes/nav.jade
+    include _includes/animations.jade
+    include _includes/images.jade
+    include _includes/webDesign.jade
+    include _includes/contact.jade
+    include _includes/footer.jade
         
     script(type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js")
     script(type="text/javascript" src="js/app.js")

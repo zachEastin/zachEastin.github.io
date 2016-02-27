@@ -75,9 +75,9 @@ var main = function() {
   		vidSrc.push($(this).attr('href'));
   	});
 
-    $('body').append("<div class='lightBoxContainer'><div class='lArrow circleIcon'>&#9664;</div><div class='imgContainer'><div class='xBtn circleIcon'>&#10005;</div>");
+    $('body').append("<div class='lightBoxContainer'><div class='lArrow circleIcon'><</div><div class='imgContainer'><div class='xBtn circleIcon'>&#10005;</div>");
 
-    $('.lightBoxContainer').append("</div><div class='rArrow circleIcon'>&#9654;</div></div>");
+    $('.lightBoxContainer').append("</div><div class='rArrow circleIcon'>></div></div>");
 
   	$('.xBtn').click(function(){
   		$('.lightBoxContainer').css('display','none');

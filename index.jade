@@ -1,21 +1,9 @@
-mixin imageBox(className, urlName)
-  .lightBox.pic.image(class="#{className}")
-    a(href="../img/../img/images/portfolio/bigPic/#{urlName}.jpg")
-mixin videoBox(className, url)
-  .lightBox.vid.video(class="#{className}")
-    a(href="#{url}")
-
-doctype html
-html(lang="en")
-  include _includes/head.jade
-  body
-    include _includes/preLoads.jade
-    include _includes/nav.jade
-    include _includes/animations.jade
-    include _includes/images.jade
-    include _includes/webDesign.jade
-    include _includes/contact.jade
-    include _includes/footer.jade
-        
-    script(type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js")
-    script(type="text/javascript" src="js/app.js")
+doctype
+html
+  head
+    include _includes/_head.jade
+  body    
+    include _includes/_nav.jade
+    include _includes/_animation.jade
+    include _includes/_images.jade
+    include _includes/_contact.jade

@@ -1,0 +1,22 @@
+//  MIXINS
+mixin vid(vidName, title, url)
+  .vid
+    .vidContainer(class!= vidName).video.lightBox
+      a(href=url)
+      .triangle
+        &#9658
+    .titleHolder
+      h4= title
+
+section#animation.active
+  .container
+    h1 Animation
+    hr
+    .vids.holder
+      +vid('demo', 'Demo Reel', 'https://www.youtube.com/embed/xPy3sxANlnU')
+      +vid('nine', '1984', 'https://player.vimeo.com/video/120224592')
+      +vid('fnf', "Feathers 'N Flowers", 'https://www.youtube.com/embed/HatbXlfNC2g?rel=0')
+      +vid('little', 'Little Things', 'https://www.youtube.com/embed/-kfeno5kcEE?rel=0')
+      +vid('wmuh', 'What Makes Us Human', 'https://www.youtube.com/embed/5cB9ndewvrk')
+      +vid('vfx', 'VFX Reel', 'https://www.youtube.com/embed/-SEdbHP8L6U')
+    

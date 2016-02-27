@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>Zach Eastin Portfolio</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/images/icons/ZE.ico">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway:100,200,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,200,100" rel="stylesheet" type="text/css">
+    <link href="css.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/app.js"></script>
     <meta name="keywords" content="Portfolio, Blender 3D, Blender, Zach Eastin">
-    <meta name="description" content="Zach Eastin's Portfolio Website">
+    <meta name="description" content="A portfolio website for the animator Zach Eastin">
     <meta charset="UTF-8">
     <meta name="author" content="Zach Eastin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,154 +17,164 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body>
-    <div>
-      <div id="preload-1"></div>
-      <div id="preload-2"></div>
-      <div id="preload-3"></div>
-      <div id="preload-4"></div>
-      <div id="preload-5"></div>
-      <div id="preload-6"></div>
-    </div>
+  <body>   
     <nav>
-      <div class="toggle">
-        <div class="toggleTop toggleLine"></div>
-        <div class="toggleMid toggleLine"></div>
-        <div class="toggleBot toggleLine"></div>
-      </div><a href="www.zacheastin.com" class="logo"></a>
-      <div class="mVids menuItem sliderClick activeMenu">
-        <h5>Animations</h5>
-      </div>
-      <div class="mImages menuItem sliderClick">
-        <h5>Images</h5>
-      </div>
-      <div class="mWebDesign menuItem sliderClick">
-        <h5>Web Design</h5>
-      </div>
-      <div class="mContact menuItem sliderClick">
-        <h5>Contact</h5>
-      </div>
-      <div class="icons"><a href="https://zacheastinanimation.wordpress.com" target="_blank" class="blog icon">
-          <h5>Blog</h5></a><a href="https://www.facebook.com/ZachEastinAnimation" target="_blank" class="facebookIcon icon"><img src="../img/images/icons/facebookF.png"></a><a href="https://www.linkedin.com/in/zacheastin" target="_blank" class="linkedInIcon icon"><img src="../img/images/icons/linkedinIN.png"></a></div>
+      <ul>
+        <li>
+          <h3>Animations</h3>
+        </li>
+        <li> 
+          <h3>Images</h3>
+        </li>
+        <li>
+          <h3>Contact</h3>
+        </li>
+      </ul>
     </nav>
-    <section id="lightBoxVids" class="contentBlock vids">
-      <div class="container flex">
-        <h1 class="mobileTitles">Animations</h1>
-        <div class="lightBox vid video demoReel"><a href="https://www.youtube.com/embed/xPy3sxANlnU"></a></div>
-        <div class="lightBox vid video WMUH"><a href="https://www.youtube.com/embed/5cB9ndewvrk"></a></div>
-        <div class="lightBox vid video WMUHvfx"><a href="https://www.youtube.com/embed/-SEdbHP8L6U"></a></div>
-        <div class="lightBox vid video nineteenEightyFour"><a href="https://player.vimeo.com/video/120224592"></a></div>
-        <div class="lightBox vid video fnf"><a href="https://www.youtube.com/embed/HatbXlfNC2g?rel=0"></a></div>
-        <div class="lightBox vid video littleThings"><a href="https://www.youtube.com/embed/-kfeno5kcEE?rel=0"></a></div><a href="" class="empty"></a><a href="" class="empty"></a><a href="" class="empty"></a>
+    <!--  MIXINS-->
+    <section id="animation" class="active">
+      <div class="container">
+        <h1>Animation</h1>
+        <hr>
+        <div class="vids holder">
+              <div class="vid">
+                <div class="vidContainer demo video lightBox"><a href="https://www.youtube.com/embed/xPy3sxANlnU"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>Demo Reel</h4>
+                </div>
+              </div>
+              <div class="vid">
+                <div class="vidContainer nine video lightBox"><a href="https://player.vimeo.com/video/120224592"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>1984</h4>
+                </div>
+              </div>
+              <div class="vid">
+                <div class="vidContainer fnf video lightBox"><a href="https://www.youtube.com/embed/HatbXlfNC2g?rel=0"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>Feathers 'N Flowers</h4>
+                </div>
+              </div>
+              <div class="vid">
+                <div class="vidContainer little video lightBox"><a href="https://www.youtube.com/embed/-kfeno5kcEE?rel=0"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>Little Things</h4>
+                </div>
+              </div>
+              <div class="vid">
+                <div class="vidContainer wmuh video lightBox"><a href="https://www.youtube.com/embed/5cB9ndewvrk"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>What Makes Us Human</h4>
+                </div>
+              </div>
+              <div class="vid">
+                <div class="vidContainer vfx video lightBox"><a href="https://www.youtube.com/embed/-SEdbHP8L6U"></a>
+                  <div class="triangle">&#9658</div>
+                </div>
+                <div class="titleHolder">
+                  <h4>VFX Reel</h4>
+                </div>
+              </div>
+        </div>
       </div>
     </section>
-    <section id="lightBoxPic" class="contentBlock images">
-      <div class="container flex">
-        <h1 class="mobileTitles">Images</h1>
-        <div class="lightBox pic image snowman"><a href="../img/../img/images/portfolio/bigPic/snowman.jpg"></a></div>
-        <div class="lightBox pic image robotLightbulb"><a href="../img/../img/images/portfolio/bigPic/Robot-lightbulbBetter.jpg"></a></div>
-        <div class="lightBox pic image oldMan"><a href="../img/../img/images/portfolio/bigPic/oldManAwesome.jpg"></a></div>
-        <div class="lightBox pic image elf"><a href="../img/../img/images/portfolio/bigPic/elfNew.jpg"></a></div>
-        <div class="lightBox pic image minicoop"><a href="../img/../img/images/portfolio/bigPic/MiniCoop.jpg"></a></div>
-        <div class="lightBox pic image bike"><a href="../img/../img/images/portfolio/bigPic/bike.jpg"></a></div>
-        <div class="lightBox pic image ornament"><a href="../img/../img/images/portfolio/bigPic/OrnamentBetter.jpg"></a></div>
-        <div class="lightBox pic image pumpkin"><a href="../img/../img/images/portfolio/bigPic/pumpkin.jpg"></a></div>
-        <div class="lightBox pic image cellphone"><a href="../img/../img/images/portfolio/bigPic/cellphone.jpg"></a></div>
-        <div class="lightBox pic image dinnerware"><a href="../img/../img/images/portfolio/bigPic/dinnerware.jpg"></a></div>
-        <div class="lightBox pic image balloons"><a href="../img/../img/images/portfolio/bigPic/balloons.jpg"></a></div>
-        <div class="lightBox pic image butGod"><a href="../img/../img/images/portfolio/bigPic/butGod.jpg"></a></div>
-        <div class="lightBox pic image africa"><a href="../img/../img/images/portfolio/bigPic/africa.jpg"></a></div><a href="" class="empty"></a><a href="" class="empty"></a><a href="" class="empty"></a>
+    <section id="images" class="right">
+      <div class="container">
+        <h1>Images</h1>
+        <hr>
+        <div class="image holder">
+              <div class="img pic lightBox model"><a href="img/images/portfolio/bigPic/woodenModel.jpg"></a></div>
+              <div class="img pic lightBox snowman"><a href="img/images/portfolio/bigPic/snowman.jpg"></a></div>
+              <div class="img pic lightBox robot"><a href="img/images/portfolio/bigPic/Robot-lightbulbBetter.jpg"></a></div>
+              <div class="img pic lightBox dinner"><a href="img/images/portfolio/bigPic/dinnerware.jpg"></a></div>
+              <div class="img pic lightBox pump"><a href="img/images/portfolio/bigPic/pumpkin.jpg"></a></div>
+              <div class="img pic lightBox orn"><a href="img/images/portfolio/bigPic/OrnamentBetter.jpg"></a></div>
+              <div class="img pic lightBox old"><a href="img/images/portfolio/bigPic/oldManAwesome.jpg"></a></div>
+              <div class="img pic lightBox cell"><a href="img/images/portfolio/bigPic/cellphone.jpg"></a></div>
+              <div class="img pic lightBox mini"><a href="img/images/portfolio/bigPic/MiniCoop.jpg"></a></div>
+              <div class="img pic lightBox lego"><a href="img/images/portfolio/bigPic/legoStarWars.jpg"></a></div>
+              <div class="img pic lightBox elf"><a href="img/images/portfolio/bigPic/elfNew.jpg"></a></div>
+              <div class="img pic lightBox bike"><a href="img/images/portfolio/bigPic/bike.jpg"></a></div>
+              <div class="img pic lightBox balloons"><a href="img/images/portfolio/bigPic/balloons.jpg"></a></div>
+        </div>
       </div>
     </section>
-    <section class="contentBlock webDesign">
-      <div class="container flex">
-        <h1 class="mobileTitles">Web Design</h1><a href="http://www.zacheastin.com" class="siteHolder"><img src="../img/images/portfolio/webGrabs/portfolio.jpg">
-          <div class="websiteInfo"> 
-            <h3>ZachEastin.com</h3>
-            <h4>Portfolio Website</h4>
-          </div></a><a href="http://www.crosstraining-inc.com" target="_blank" class="siteHolder"><img src="../img/images/portfolio/webGrabs/crosstraining-inc.jpg">
-          <div class="websiteInfo"> 
-            <h3>CrossTraining-Inc.com</h3>
-            <h4>CrossTraining Gym Website</h4>
-          </div></a>
-      </div>
-    </section>
-    <section class="contact contentBlock">
-      <div class="container flex">
-        <h1 class="mobileTitles">Contact Me</h1>
-        <div class="profPic"></div>
-        <div class="buttonHolder"><a href="mailto:chatme@zacheastin.com" target="_blank" class="button">
-            <p>Email Me</p></a><a href="https://www.facebook.com/ZachEastinAnimation" target="_blank" class="button">
-            <p>facebook</p></a><a href="https://www.linkedin.com/in/zacheastin" target="_blank" class="button">
-            <p>linkedin</p></a></div>
-        <div class="resume">
-          <div class="row">
-            <div class="resHeader blue">
+    <section id="contact" class="right">
+      <div class="container">
+        <h1>Contact</h1>
+        <hr>
+        <div class="contact holder">
+          <div class="half"><img src="img/images/profPic.jpg">
+            <div class="btnHolder">
+              <!--.btn--><a href="mailto:chatme@zacheastin.com" target="_blank" class="btn">Email</a><a href="https://www.facebook.com/zacheastinanimation" target="_blank" class="btn">Facebook</a><a href="https://www.linkedin.com/in/zacheastin" target="_blank" class="btn">LinkedIn</a>
+            </div>
+          </div>
+          <div class="half">
+            <ol>
               <h2>Experience</h2>
-            </div>
-            <div class="resInfo">
-              <div class="exSection">
-                <p class="tOne">what makes us human short film</p>
-                <p class="tTwo">VFX Supervisor</p>
-                <p class="tThree">3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor</p>
-              </div>
-              <div class="exSection">
-                <p class="tOne">Pointe of Contact Short Film</p>
-                <p class="tTwo">VFX Supervisor</p>
-                <p class="tThree">3D Tracking; Compositing</p>
-              </div>
-              <div class="exSection">
-                <p class="tOne">CrossTraining Inc. Website</p>
-                <p class="tTwo">Designer</p>
-                <p class="tThree">Squarespace; Designer; Image Editor</p>
-              </div>
-              <div class="exSection">
-                <p class="tOne">Personal Portfolio Website</p>
-                <p class="tTwo">Designer Builder</p>
-                <p class="tThree">HTML/Jade; CSS/SASS; jQuery; Jekyll; GitHub Pages</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="resHeader green">
+              <ul>
+                <div class="liHolder">
+                  <li class="tOne">What Makes Us Human Short Film</li>
+                  <li class="tTwo">VFX Supervisor</li>
+                  <li class="tThree">3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor</li>
+                  <li class="tOne">Pointe Of Contact Short Film</li>
+                  <li class="tTwo">VFX Supervisor</li>
+                  <li class="tThree">3D Tracking; Compositing</li>
+                  <li class="tOne">CrossTraining Inc. Website</li>
+                  <li class="tTwo">Designer</li>
+                  <li class="tThree">Squarespace; Designer; Image Editor</li>
+                  <li class="tOne">Personal Portfolio Website</li>
+                  <li class="tTwo">Designer Builder</li>
+                  <li class="tThree">HTML/Jade; CSS/SASS; JQuery; Jekyll; GitHub Pages</li>
+                </div>
+              </ul>
+            </ol>
+            <ol>
               <h2>Skills</h2>
-            </div>
-            <div class="resInfo">
-              <p>Collaboration</p>
-              <p>Problem Solving</p>
-              <p>Hard Worker</p>
-              <p>Lover of Learning</p>
-              <p>3D Modeling</p>
-              <p>2D Motion Design</p>
-              <p>3D Animations</p>
-              <p>Website Building</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="resHeader blue">
+              <ul>
+                <div class="liHolder">
+                  <li>Collaboration</li>
+                  <li>Problem Solving</li>
+                  <li>Hard Worker</li>
+                  <li>Lover Of Learning</li>
+                  <li>3D Modeling</li>
+                  <li>2D Motion Design</li>
+                  <li>3D Animations</li>
+                  <li>Website Building</li>
+                </div>
+              </ul>
+            </ol>
+            <ol>
               <h2>Education</h2>
-            </div>
-            <div class="resInfo">
-              <p>Electronic Arts: Computer Animation BS; GPA 3.52</p>
-              <p>Art Minor</p>
-              <p>Missouri State University Springfield, MO May 2015</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="resHeader green">
+              <ul>
+                <div class="liHolder">
+                  <li>Electronic Arts: Computer Animation BS; GPA 3.52</li>
+                  <li>Art Minor</li>
+                  <li>Missouri State University Springfield, MO May 2015</li>
+                </div>
+              </ul>
+            </ol>
+            <ol>
               <h2>Awards</h2>
-            </div>
-            <div class="resInfo">
-              <p>District Gold ADDY Award 2014 - <em>Production Assistant<em></p>
-            </div>
+              <ul>
+                <div class="liHolder">
+                  <li>District Gold ADDY Award 2014 - Production Assistant</li>
+                </div>
+              </ul>
+            </ol>
           </div>
         </div>
       </div>
     </section>
-    <footer>
-      <p>Website designed and built by the artist, Zach Eastin</p>
-    </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

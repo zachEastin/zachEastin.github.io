@@ -1,117 +1,29 @@
 nav
-  display: flex
-  justify-content: space-around
-  flex-flow: row wrap
-  align-items: center
-  background-color: #111533
-  z-index: 3
+  width: 100vw
   position: fixed
+  bottom: 0
   left: 0
-  width: 100%
-  transition: all 500ms ease
-  .menuItem
-    padding: 4px 10px
-    cursor: pointer
-    transform: scale(1)
-    &:hover
-      transform: scale(1.2)
-    h5
-      margin: 0
-      color: white
-      font:
-        family: 'Raleway', sans-serif
-        weight: 200
-        size: 24px
-  .slider
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: 0
-    background-color: #383838
-    z-index: -1
-  .logo
-    background:
-      color: #111533
-      image: url("../img/images/ZachEastinWhite.png")
-      repeat: no-repeat
-      size: contain
-    width: 100px
-    height: 50px
-    transform: scale(1)
-    &:hover
-      transform: scale(1.2)
-
-
-
-
-@media (max-width:1024px)
-  .toggle
-    display: block
-    height: 50px
-    width: 50px
-    position: absolute
-    top: 15px
-    left: 150px
-    border-radius: 100%
-
-    .toggleLine
-      width: 40px
-      height: 3px
-      background: white
-      display: block
-      position: relative
-      transition: all 0.3s ease
-      margin: 0 auto
-      transform-origin: center
-
-    .toggleTop
-      top: 15px
-      transform: rotate(0deg)
-
-    .toggleMid
-      top: 22px
-      transform: rotate(0deg)
-
-    .toggleBot
-      top: 29px
-      transform: rotate(0deg)
-
-
-    .toggleXTop
-      transform: rotate(45deg)
-      top: 24px
-    .toggleXBot
-      transform: rotate(-45deg)
-      top: 18px
-    .toggleXMid
-      background: transparent
-
-  .navNormal
-  .navOpen
-    left: 0
-  .navOpenBody
-    left: 135px
-
-  nav
-    position: fixed
-    background-color: #333
-    width: 135px
-    height: 100vh
-    text-align: right
-    left: -135px
-    .slider
-      display: none
-    .logo
-      background-color: #333
-      margin-top: 15px
-    &:first-child
-      margin-top: 50px
-
-  //icons
-  .icons
-    position: relative
+  background-color: rgba($dgreen, .8)
+  z-index: 2
+  ul
+    margin: 0
+    padding: 0
     display: flex
-    padding: 4px 10px
-    flex-direction: column
-    justify-content: flex-end
+    flex-direction: row
+    flex: space-around
+    justify-content: space-around
+    li
+      list-style: none
+      padding: 15px 20px
+      cursor: pointer
+      +transition
+      &:hover
+        background-color: rgba(black, .4)
+      &:active
+        background-color: $dgreen
+@media (max-width:1024px)
+  nav
+    position: relative
+    top: 0
+    bottom: auto
+    border-bottom: white solid 1px

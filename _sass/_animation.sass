@@ -1,0 +1,83 @@
+@mixin vid($name)
+  background-image: url('img/vids/small/' + $name + '.jpg')
+
+#animation
+  .vids
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .vid
+      width: 33.333333%
+      height: 192px
+      margin-bottom: 59px
+      cursor: pointer
+      +transition
+      &:hover
+        box-shadow: 0px 0px 30px black
+        z-index: 1
+    .vidContainer
+      width: 100%
+      height: 100%
+      background:
+        color: $blue
+        size: cover
+        position: center
+      position: relative
+      opacity: 0
+      transform: translate3d(0, -100%, 0)
+      display: flex
+      align-items: center
+      justify-content: center
+      +cubic
+      &:hover > .triangle
+        transform: rotateZ(360deg)
+        +cubic
+      .triangle
+          font-size: 800%
+          color: rgba($ltBlue, .6)
+
+
+    .titleHolder
+      //background-color: $ltBlue
+      width: 100%
+      opacity: 0
+      transform: translate3d(0, -100%, 0)
+      +cubic
+
+    .fadeInDown
+        opacity: 1
+        transform: none
+
+
+  .demo
+    +vid('demoReel')
+  .nine
+    +vid('1984')
+  .fnf
+    +vid('feathersNflowers')
+  .little
+    +vid('littleThings')
+  .wmuh
+    +vid('WMUH')
+  .vfx
+    +vid('vfxReel')
+
+
+@media (max-width: 1024px)
+  #animation
+    .vids
+      .vid
+        width: 50%
+        height: 288px
+        &:hover
+          box-shadow: 0px 0px 0px transparent
+          z-index: 0
+        .titleHolder
+          background-color: #e3e3e3
+@media (max-width: 414px)
+  #animation
+    .vids
+      .vid
+        width: 100%
+        height: 233px

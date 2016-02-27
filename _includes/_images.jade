@@ -1,0 +1,22 @@
+mixin image(name, href)
+    .img.pic.lightBox(class!=name)
+      a(href=href)
+
+section#images.right
+  .container
+    h1 Images
+    hr
+    .image.holder
+      +image('model', 'img/images/portfolio/bigPic/woodenModel.jpg')
+      +image('snowman', 'img/images/portfolio/bigPic/snowman.jpg')
+      +image('robot', 'img/images/portfolio/bigPic/Robot-lightbulbBetter.jpg')
+      +image('dinner', 'img/images/portfolio/bigPic/dinnerware.jpg')
+      +image('pump', 'img/images/portfolio/bigPic/pumpkin.jpg')
+      +image('orn', 'img/images/portfolio/bigPic/OrnamentBetter.jpg')
+      +image('old', 'img/images/portfolio/bigPic/oldManAwesome.jpg')
+      +image('cell', 'img/images/portfolio/bigPic/cellphone.jpg')
+      +image('mini', 'img/images/portfolio/bigPic/MiniCoop.jpg')
+      +image('lego', 'img/images/portfolio/bigPic/legoStarWars.jpg')
+      +image('elf', 'img/images/portfolio/bigPic/elfNew.jpg')
+      +image('bike', 'img/images/portfolio/bigPic/bike.jpg')
+      +image('balloons', 'img/images/portfolio/bigPic/balloons.jpg')

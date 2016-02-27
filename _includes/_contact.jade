@@ -1,0 +1,51 @@
+-skills = ['Collaboration', 'Problem Solving', 'Hard Worker', 'Lover Of Learning', '3D Modeling', '2D Motion Design', '3D Animations', 'Website Building'];
+
+section#contact.right
+  .container
+    h1 Contact
+    hr
+    .contact.holder
+      .half
+        img(src="img/images/profPic.jpg")
+        .btnHolder
+          //.btn
+          a(href="mailto:chatme@zacheastin.com" target="_blank").btn Email
+          a(href="https://www.facebook.com/zacheastinanimation" target="_blank").btn Facebook
+          a(href="https://www.linkedin.com/in/zacheastin" target="_blank").btn LinkedIn
+      .half
+        ol
+          h2 Experience
+          ul
+            .liHolder
+              li.tOne What Makes Us Human Short Film
+              li.tTwo VFX Supervisor
+              li.tThree 3D Tracking; Compositing; Modeling; Pre-Vis; UI Design; Script Supervisor
+              li.tOne Pointe Of Contact Short Film
+              li.tTwo VFX Supervisor
+              li.tThree 3D Tracking; Compositing
+              li.tOne CrossTraining Inc. Website
+              li.tTwo Designer
+              li.tThree Squarespace; Designer; Image Editor
+              li.tOne Personal Portfolio Website
+              li.tTwo Designer Builder
+              li.tThree HTML/Jade; CSS/SASS; JQuery; Jekyll; GitHub Pages
+        ol
+          h2 Skills
+          ul
+            .liHolder
+              each skill in skills.length ? skills : ['none']
+                li= skill
+        ol
+          h2 Education
+          ul
+            .liHolder
+              li Electronic Arts: Computer Animation BS; GPA 3.52
+              li Art Minor
+              li Missouri State University Springfield, MO May 2015
+        ol
+          h2 Awards
+          ul
+            .liHolder
+              li District Gold ADDY Award 2014 - Production Assistant
+
+      

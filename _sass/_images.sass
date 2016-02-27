@@ -1,70 +1,60 @@
-//Images images
-.snowman
-  background-image: url(../img/images/portfolio/medium/snowman.jpg)
-.robotLightbulb
-  background-image: url(../img/images/portfolio/medium/robot.jpg)
-.model
-  background-image: url(../img/images/portfolio/medium/model.jpg)
-.oldMan
-  background-image: url(../img/images/portfolio/medium/oldMan.jpg)
-.elf
-  background-image: url(../img/images/portfolio/medium/elf.jpg)
-.minicoop
-  background-image: url(../img/images/portfolio/medium/miniCoop.jpg)
-.bike
-  background-image: url(../img/images/portfolio/medium/bike.jpg)
-.ornament
-  background-image: url(../img/images/portfolio/medium/ornament.jpg)
-.pumpkin
-  background-image: url(../img/images/portfolio/medium/pumpkin.jpg)
-.cellphone
-  background-image: url(../img/images/portfolio/medium/cellphone.jpg)
-.dinnerware
-  background-image: url(../img/images/portfolio/medium/dinnerware.jpg)
-.balloons
-  background-image: url(../img/images/portfolio/medium/balloons.jpg)
-.butGod
-  background-image: url(../img/images/portfolio/medium/butGod.jpg)
-.africa
-  background-image: url(../img/images/portfolio/medium/africa.jpg)
-.image
-  background:
-    repeat: no-repeat
-    size: cover
-    position: center
-  width: 300px
-  height: 300px
-  transition: all 500ms ease
-  cursor: pointer
+@mixin  image ($name)
+  background-image: url('img/images/portfolio/small/' + $name + '.jpg')
 
-  &:hover
-    width: 533.3333333333333px
-    box-shadow: inset 0 0 80px black
+#images
+    .image
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      .img
+        width: 256px
+        height: 256px
+        background:
+          color: $green
+          size: cover
+          position: center
+        cursor: pointer
+        +transition
+        &:hover
+          transform: scale(1.2)
+          z-index: 1
+      .model
+        +image(model)
+      .snowman
+        +image(snowman)
+      .robot
+        +image(robot)
+      .dinner
+        +image(dinner)
+      .pump
+        +image(pump)
+      .orn
+        +image(orn)
+      .old
+        +image(old)
+      .cell
+        +image(cell)
+      .mini
+        +image(mini)
+      .lego
+        +image(lego)
+      .elf
+        +image(elf)
+      .bike
+        +image(bike)
+      .balloons
+        +image(balloons)
 
-.empty
-  width: 300px
-  height: 300px
-  cursor: default
-  pointer-events: none
-
-@media (max-width:1600px)
-  .image
-    width: 200px
-    height: 200px
-    &:hover
-      width: 355.5555555555556px
-
-  .empty
-    width: 200px
-
-@media (max-width:750px)
-  .image
-    width: 100vw
-    &:hover
-      width: 100vw
-      height: 0
-      padding-bottom: 56%
-      box-shadow: inset 0 0 80px black
-  .empty
-    width: 0
-    height: 0
+@media (max-width: 1024px)
+  #images
+      .image
+        .img
+          width: 33.33333%
+          height: 0
+          padding: 15% 0
+          &:hover
+            transform: scale(1)
+            z-index: 0
+          &:active
+            transform: scale(1.2)
+            z-index: 1

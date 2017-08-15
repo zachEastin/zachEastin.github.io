@@ -12,10 +12,6 @@
       height: 192px
       margin-bottom: 59px
       cursor: pointer
-      +transition
-      &:hover
-        box-shadow: 0px 0px 30px black
-        z-index: 1
     .vidContainer
       width: 100%
       height: 100%
@@ -31,12 +27,15 @@
       justify-content: center
       +cubic
       &:hover > .triangle
-        transform: rotateZ(360deg)
-        +cubic
+        font-size: 900%
+        text-shadow: 0 0 60px rgba(black, 1)
+        color: rgba(white, .9)
       .triangle
           font-size: 800%
-          color: rgba($ltBlue, .6)
-
+          color: rgba(white, .5)
+          text-shadow: 0 0 30px rgba(black, 1)
+          transition: all .5s cubic-bezier(.17,.67,.53,.97)
+          transform: scale(0.6) scaleX(.8)
 
     .titleHolder
       //background-color: $ltBlue
@@ -70,11 +69,12 @@
       .vid
         width: 50%
         height: 288px
-        &:hover
+        &:hover > .triangle
           box-shadow: 0px 0px 0px transparent
           z-index: 0
         .titleHolder
-          background-color: #e3e3e3
+          //background-color: #e3e3e3
+          background-color: transparent
 @media (max-width: 414px)
   #animation
     .vids

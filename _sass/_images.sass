@@ -11,13 +11,31 @@
         height: 256px
         background:
           color: $green
-          size: cover
+          size: 210%
           position: center
         cursor: pointer
         +transition
         &:hover
-          transform: scale(1.2)
-          z-index: 1
+          transform: scale(1.1)
+          background-size: 180%
+        &:hover > .imgTitle
+          transform: rotateX(0deg)
+          opacity: 1
+        .imgTitle
+          opacity: 0
+          transform: rotateX(-90deg)
+          background-color: rgba($blue, .6)
+          height: 100%
+          width: 100%
+          color: white
+          font-size: 210%
+          font-weight: 200
+          display: flex
+          align-items: center
+          justify-content: center
+          text-align: center
+          z-index: 2
+          +cubic
       .model
         +image(model)
       .snowman

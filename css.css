@@ -585,7 +585,7 @@ section#contact {
         font-weight: 200;
         cursor: pointer;
         color: #6ab0de;
-        margin: 0
+        margin: 0;
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;
         -webkit-transition: all .2s ease;

@@ -34,7 +34,7 @@ var main = function() {
     $('body').css('height', itemHeight);
   });
 
-// ANIMATION
+// ANIMATION PAGE
   $('.vidContainer').each(function(i){
 
     setTimeout(function(){
@@ -45,7 +45,22 @@ var main = function() {
     },100 + (i * 250));
 
   });
-//  CONTACT
+
+// IMAGE PAGE
+  /*$('.imgTitle span').each(function (i) {
+
+      var iWidth = $('.imgTitle:eq(' + i + ')').width(),
+            fWidth = $('.imgTitle:eq(' + i + ') span').width(),
+            setWidth = ((iWidth / fWidth) * 16);
+      console.log(i);
+      console.log("img width is " + iWidth);
+      console.log("font width is " + fWidth);
+      console.log("set width is " + setWidth);
+      $('.imgTitle').css('font-size', setWidth + 'px');
+
+  });*/
+
+//  CONTACT PAGE
   var $this;
   $('#contact h2').click(function () {
 
@@ -75,9 +90,9 @@ var main = function() {
   		vidSrc.push($(this).attr('href'));
   	});
 
-    $('body').append("<div class='lightBoxContainer'><div class='lArrow circleIcon'><</div><div class='imgContainer'><div class='xBtn circleIcon'>&#10005;</div>");
+    $('body').append("<div class='lightBoxContainer'><div class='lArrow circleIcon'>&#9664;</div><div class='imgContainer'><div class='xBtn circleIcon'>&#10005;</div>");
 
-    $('.lightBoxContainer').append("</div><div class='rArrow circleIcon'>></div></div>");
+    $('.lightBoxContainer').append("</div><div class='rArrow circleIcon'>&#9654;</div></div>");
 
   	$('.xBtn').click(function(){
   		$('.lightBoxContainer').css('display','none');

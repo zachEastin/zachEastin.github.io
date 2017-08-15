@@ -1,78 +1,128 @@
 @mixin  image ($name)
   background-image: url('img/images/portfolio/small/' + $name + '.jpg')
 
-#images
-    .image
-      display: flex
-      flex-direction: row
+section#img
+  margin-bottom: 100px
+  display: none
+  .container
+    .imgGrid
+      width: 1000px
+      margin: 0 auto
       flex-wrap: wrap
-      .img
-        width: 256px
-        height: 256px
-        background:
-          color: $green
-          size: 210%
-          position: center
+      display: flex
+      .imgBox
+        width: 200px
+        height: 200px
         cursor: pointer
-        +transition
+        position: relative
+        transition: all .2s ease
         &:hover
-          transform: scale(1.1)
           background-size: 180%
-        &:hover > .imgTitle
+          transform: scale(1.1)
+          z-index: 1
+        &:hover .img
+          filter: blur(3px) brightness(.75)
+        &:hover .titleHolder
           transform: rotateX(0deg)
           opacity: 1
-        .imgTitle
+        .img
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          transition: all .4s ease
+          background:
+            position: center
+            size: 220%
+        .titleHolder
+          position: absolute
+          top: 0
+          left: 0
           opacity: 0
           transform: rotateX(-90deg)
-          background-color: rgba($blue, .6)
-          height: 100%
+          background-color: rgba($accent2, .6)
           width: 100%
-          color: white
-          font-size: 210%
-          font-weight: 200
+          height: 100%
           display: flex
           align-items: center
           justify-content: center
+          color: white
+          font-size: 170%
+          font-weight: 200
           text-align: center
           z-index: 2
-          +cubic
-      .model
-        +image(model)
-      .snowman
-        +image(snowman)
-      .robot
-        +image(robot)
-      .dinner
-        +image(dinner)
-      .pump
-        +image(pump)
-      .orn
-        +image(orn)
-      .old
-        +image(old)
-      .cell
-        +image(cell)
-      .mini
-        +image(mini)
-      .lego
-        +image(lego)
-      .elf
-        +image(elf)
-      .bike
-        +image(bike)
-      .balloons
-        +image(balloons)
+          text-shadow: 0 0 10px black
+          transition: all .8s cubic-bezier(.17,.67,.53,.97)
 
-@media (max-width: 1024px)
-  #images
-      .image
-        .img
-          width: 33.33333%
-          height: 0
-          padding: 15% 0
+
+.model
+  +image(model)
+.snowman
+  +image(snowman)
+.robot
+  +image(robot)
+.dinner
+  +image(dinner)
+.pump
+  +image(pump)
+.orn
+  +image(orn)
+.old
+  +image(old)
+.cell
+  +image(cell)
+.mini
+  +image(mini)
+.lego
+  +image(lego)
+.elf
+  +image(elf)
+.bike
+  +image(bike)
+.balloons
+  +image(balloons)
+
+@media (max-width: 1200px)
+  section#img
+    .container
+      .imgGrid
+        width: 800px
+
+@media (max-width: 1000px)
+  section#img
+    .container
+      .imgGrid
+        width: 600px
+
+@media (max-width: 800px) and (orientation: portrait)
+  section#img
+    .container
+      .imgGrid
+        width: 100%
+        .imgBox
+          width: 50%
+          height: 200px
           &:hover
+            background-size: 100%
             transform: scale(1)
-            z-index: 0
-          &:active
-            transform: scale(1.2)
-            z-index: 1
+            z-index: auto
+          &:hover .img
+            filter: blur(0px)
+          &:hover .titleHolder
+            transform: rotateX(0deg)
+            opacity: 0
+          .img
+            background:
+              size: cover
+          .titleHolder
+            display: none
+
+@media (max-width: 400px) and (orientation: portrait)
+  section#img
+    .container
+      .imgGrid
+        width: 100%
+        .imgBox
+          width: 50%
+          height: 150px

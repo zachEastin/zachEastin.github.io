@@ -1,119 +1,61 @@
-//   COLORS
-$dgreen: #0c1f1a
-$green: #15352d
-$greenBut: #122d27
-$blue: #1f5268
-$ltBlue: #7b929b
+@mixin transition
+  transition: all .3s ease-in-out
 
-=transition()
-  transition: all .2s ease
-=cubic()
-  transition: all .8s cubic-bezier(.17,.67,.53,.97)
-
-//  UNIVERSAL TAGS
+$bkgd: #F8F6F6
+$accent1: #CF4647
+$main: #2A363B
+$accent2: #F5D061
+$accent3: #2980B9
+.bodyDark
+  background-color: black
 body
-  margin: 0
+  background-color: #1A1A1B
+  color: $main
   font-family: 'Raleway', sans-serif
-  background-color: white
-  overflow-x: hidden
   width: 100vw
-  position: relative
+  overflow-x: hidden
+  margin: 0
+  padding: 0
+  transition: all .6s ease
+  .blur
+    filter: blur(3px) brightness(30%)
+
+
 section
-  width: 100VW
   position: absolute
-  transition: all .8s ease
-  margin-bottom: 100px
-.holder
-  margin-top: 26px
-.container
-  width: 75%
-  max-width: 1024px
-  margin: 0 auto
+  top: 0
+  left: 102vw
+  transition: all .6s ease
+  min-height: 100vh
+  width: 100vw
 
-hr
-  -webkit-margin-before: 0em
-  -webkit-margin-after: 0em
-  border: solid 1px $green
-  width: 80%
-  margin: 0 auto
-
-
-//  FONT FORMATTING
-h1
-  color: $green
-  font:
-    weight: 100
-    size: 5.7em
-  text-align: center
-  -webkit-margin-before: 10px
-  -webkit-margin-after: 0em
-h2
-  color: $green
-  line-height: 1
-  text-align: left
-  font:
-    weight: 200
-    size: 4em
-  -webkit-margin-before: 0em
-  -webkit-margin-after: 0em
-h3
-  color: white
-  font:
-    weight: 400
-    size: 2em
-  -webkit-margin-before: 0em
-  -webkit-margin-after: 0em
-h4
-  color: $green
-  font:
-    weight: 300
-    size: 2.1em
-  -webkit-margin-before: 0
-  -webkit-margin-after: 0
-  text-align: center
-  margin-top: 5px
-
-//  PAGE MOVE
-.none
-  display: none
-.block
-  display: block
-.right
-  left: 150vw
 .active
   left: 0
 
-@media (max-width: 1024px)
-  body
-    background-color: $green
-  .container
-    width: 100%
-    max-width: 823px
-    margin: 0 auto
+h1
+  color: white
+  font-weight: 200
+  font-size: 77px
+  text-align: center
+  -webkit-margin-before: 30px
+  -webkit-margin-after: 30px
+
+h3
+  font:
+    size: 54px
+    weight: 300
+  text-align: right
+  -webkit-margin-before: 0
+  -webkit-margin-after: 0
+  display: inline-block
+
+
+.container
+  width: 100%
+  max-width: 1356px
+  margin: 0 auto
+
+
+@media (max-width: 1000px) and (orientation: portrait)
   h1
-    color: white
-  h2
-    color: white
-  h3
-    color: white
-  h4
-    //color: $blue
-    color: white
-  hr
-    border-color: white
-    width: 100%
-@media (max-width:768px)
-  .container
-    max-width: 650px
-@media (max-width: 414px)
-  h1
-    font-size: 3em
-  h2
-    font-size: 2.8em
-  h3
-    font-size: 1em
-@media (max-width: 375px)
-  h2
-    font-size: 2.2em
-  h3
-    font-size: .7em
+    margin-top: 100px

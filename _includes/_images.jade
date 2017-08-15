@@ -1,14 +1,13 @@
-mixin image(title, name, href)
-    .img.pic.lightBox(class!=name)
-      .imgTitle
-        span= title
-      a(href=href)
+// MIXINS
+mixin image(title, name, url)
+  .imgBox.pic.lightBox
+    .titleHolder= title
+    a(href=url).img(class!=name)
 
-section#images.right
+section#img
   .container
     h1 Images
-    hr
-    .image.holder
+    .imgGrid
       +image('special', 'model', 'img/images/portfolio/bigPic/woodenModel.jpg')
       +image('unusual gift', 'snowman', 'img/images/portfolio/bigPic/snowman.jpg')
       +image('curiosity', 'robot',  'img/images/portfolio/bigPic/Robot-lightbulbBetter.jpg')

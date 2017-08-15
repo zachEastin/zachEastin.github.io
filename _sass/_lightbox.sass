@@ -1,7 +1,7 @@
 /*----LIGHTBOX----*/
 .lightBoxContainer
   background-color: rgba(0, 0, 0, 0.9)
-  z-index: 4
+  z-index: 40
   width: 100vw
   height: 100vh
   display: none
@@ -12,54 +12,59 @@
   left: 0
   transition: all 0.4s ease
   overflow: overlay
+  opacity: 0
+  transition: all .3s ease
+
+.displayFlex
+  display: flex
+.opacity1
+  opacity: 1
 
 .circleIcon
-  z-index: 4
-  width: 80px
-  height: 80px
-  //border: solid 2px white
-  //border-radius: 50%
-  //background-color: $green
-  background-color: transparent
+  z-index: 40
+  width: 50px
+  height: 50px
+  border-radius: 50%
   color: white
   display: flex
   align-items: center
   justify-content: center
   cursor: pointer
-  line-height: 1
+
+.arrow
+  border: solid 2px white
+  svg
+    width: 50px
+    height: 50px
+    fill: white
 
 .lArrow
   margin-left: 30px
-  font-size: 80px
-  transition: all .2s ease
-  border-radius: 10%
-  &:hover
-    transform: scale(1.1)
-    background-color: rgba(white, .1)
 
 .rArrow
   margin-right: 30px
-  font-size:  80px
-  transition: all .2s ease
-  border-radius: 10%
-  border-radius: 10%
-  &:hover
-    transform: scale(1.1)
-    background-color: rgba(white, .1)
 
 .xBtn
+  padding: 5px
   z-index: 5
   position: absolute
-  top: -45px
-  right: -45px
-  font-size: 30px
-  width: 50px
-  height: 50px
-  border-radius: 10%
-  transition: all .2s ease
+  top: 5px
+  right: 7px
+  font-size: 50px
+  width: 30px
+  height: 30px
+  background-color: rgba(black, .25)
+  box-shadow: 0 0 30px 10px rgba(black, .3)
+  transition: all .3s ease
   &:hover
-    transform: scale(1.2)
-    background-color: rgba(white, .1)
+    padding: 5px
+    background-color: rgba(black, .4)
+    box-shadow: 0 0 10px 10px rgba(black, .4)
+
+.xOut
+  top: -40px
+  right: -40px
+  font-size: 35px
 
 .imgContainer
   z-index: 4
@@ -70,15 +75,15 @@
 
 .imgContainer img
   max-width: 100%
-  max-height: 100%
+  max-height: auto
 
 iframe
   position: absolute
   top: 0
 
 .vidSize
-  width: 640px
-  height: 360px
+  max-width: 640px
+  max-height: 360px
 
 .spinner
   z-index: -1
@@ -128,3 +133,12 @@ iframe
   20%
     transform: scaleY(1)
     -webkit-transform: scaleY(1)
+
+@media (orientation: portrait)
+  .arrow
+    display: none
+  .vidSize
+    width: 100%
+    height: 360px
+  .xBtn
+    right: 0

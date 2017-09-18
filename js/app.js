@@ -143,14 +143,20 @@ var main = function() {
     }
     if(isPic){
 
-      index = $('.lightBox.pic').index($(this));
-      $('.lightBoxContainer').addClass('displayFlex').delay(10).queue(function(next){
-          $(this).addClass('opacity1');
-          next();
-      });
-      $('.xBtn').removeClass('xOut');
-      $('.imgContainer').append("<img src= />").children('img').attr('src',imgSrc[index]);
-      return index;
+      if ($(window).width() >= 456) {
+        console.log('yup!');
+      } else {
+
+        index = $('.lightBox.pic').index($(this));
+        $('.lightBoxContainer').addClass('displayFlex').delay(10).queue(function(next){
+            $(this).addClass('opacity1');
+            next();
+        });
+        $('.xBtn').removeClass('xOut');
+        $('.imgContainer').append("<img src= />").children('img').attr('src',imgSrc[index]);
+        return index;
+
+      }      
 
     } else if(!isPic){
 

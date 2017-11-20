@@ -20,14 +20,14 @@ var main = function() {
 
       setTimeout(function () {
 
-        if ($('section:nth-child(' + (index + 3) + ')').hasClass('active')) {
+        if ($('section:nth-child(' + (index + 2) + ')').hasClass('active')) {
 
         } else {
           $('section.active').removeClass('active').delay(600).queue(function(next){
               $(this).css('display','none');
               next();
           });
-          $('section:nth-child(' + (index + 3) + ')').css('display','block').delay(100).queue(function(next){
+          $('section:nth-child(' + (index + 2) + ')').css('display','block').delay(100).queue(function(next){
               $(this).addClass('active');
               next();
           });
